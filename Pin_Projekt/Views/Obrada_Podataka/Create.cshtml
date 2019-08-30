@@ -1,0 +1,58 @@
+﻿@model Pin_Projekt.Models.Obrada_Podataka
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Obrada_Podataka</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ime_Proizvoda" class="control-label"></label>
+                <input asp-for="Ime_Proizvoda" class="form-control" />
+                <span asp-validation-for="Ime_Proizvoda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tržište" class="control-label"></label>
+                <input asp-for="Tržište" class="form-control" />
+                <span asp-validation-for="Tržište" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Etiketa" class="control-label"></label>
+                <input asp-for="Etiketa" class="form-control" />
+                <span asp-validation-for="Etiketa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Čep" class="control-label"></label>
+                <input asp-for="Čep" class="form-control" />
+                <span asp-validation-for="Čep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Izgled_Proizvoda" class="control-label"></label>
+                <input asp-for="Izgled_Proizvoda" class="form-control" />
+                <span asp-validation-for="Izgled_Proizvoda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Spremi" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

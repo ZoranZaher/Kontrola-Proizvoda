@@ -1,0 +1,57 @@
+﻿@model Pin_Projekt.Models.Obrada_Podataka
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Jeste li sigurni da želite izbrisat stavku?</h3>
+<div>
+    <h4>Obrada_Podataka</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime_Proizvoda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ime_Proizvoda)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Tržište)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tržište)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Etiketa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Etiketa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Čep)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Čep)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Izgled_Proizvoda)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Izgled_Proizvoda)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Izbriši" class="btn btn-default" /> |
+        <a asp-action="Index">Povrat na listu</a>
+    </form>
+</div>
